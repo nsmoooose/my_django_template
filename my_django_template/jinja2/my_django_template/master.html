@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ static('my_django_template/style.css') }}">
+	<script type="module">
+	  import {
+		  ui_ready,
+		  ui_init,
+	  } from "{{ static('my_django_template/ui.js') }}";
+	  ui_ready(ui_init);
+	</script>
+  </head>
+  <body>
+    <header>
+      <h1>My Django Template</h1>
+    </header>
+    <nav>
+      <menu>
+        <li><a href="{{ url('index') }}">Home</a></li>
+        <li style="float: right;"><a href="{{ url('admin:index') }}">Administration</a></li>
+      </menu>
+    </nav>
+	{% block content %}
+	{% endblock %}
+    <footer>
+	  Some footer.
+    </footer>
+  </body>
+</html>
