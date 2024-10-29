@@ -1,0 +1,11 @@
+#!/bin/bash
+if ! [[ $_ != $0 ]]; then
+   cat <<EOF
+ERROR: Source this file in bash using:
+
+$ source $0
+
+EOF
+fi
+source venv/bin/activate
+export PYTHONPATH=$(pwd)

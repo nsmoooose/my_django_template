@@ -1,0 +1,5 @@
+Django
+requests
+tzdata
+Jinja2
+djangosaml2
